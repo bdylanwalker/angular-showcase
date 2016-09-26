@@ -1,0 +1,12 @@
+<table st-table="displayedShipments" st-safe-src="shipments" class="table table-striped">
+  <thead>
+  <tr>
+    <th st-skip-natural="true" lr-drag-src="headers" lr-drop-target="headers" ng-repeat="col in columns" st-sort="{{col}}">{{col}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in displayedShipments">
+    <td ng-repeat="col in columns">{{row[col]}}</td>
+  </tr>
+  </tbody>
+</table>

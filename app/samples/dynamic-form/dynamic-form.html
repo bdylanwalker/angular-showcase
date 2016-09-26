@@ -1,0 +1,41 @@
+<div ng-controller="DynamicFormController as dynamicForm" xmlns="http://www.w3.org/1999/html">
+
+
+
+ <button type="button"  class="btn btn-primary"  ng-model="checkModel.right"  ng-click="addDimension()" > AddDimension</button>
+
+ <hr> </hr>
+
+    <li  ng-repeat = 'dimension in dimensionvalues'>
+
+      <input type = 'text' ng-model='dimension.width' placeholder="Width">
+      <input type = 'text' ng-model='dimension.length' placeholder="length" >
+      <input type = 'text' ng-model='dimension.height' placeholder="height">
+
+    </li>
+
+  <hr> </hr>
+
+
+  <table st-table="rowCollection" class="table table-striped">
+  <thead>
+  <tr>
+    <th>Width</th>
+    <th>Length</th>
+    <th>Height</th>
+  </tr>
+  </thead>
+
+  <tbody>
+     <tr ng-repeat="x in dimensionvalues">
+      <td>{{ x.width }}</td>
+      <td>{{ x.length }}</td>
+      <td>{{ x.height }}</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+
+
+</div>
